@@ -1,51 +1,65 @@
-# Gluten-Free Recipe Collection
+# Gluten-Free Recipe Repository
 
-A personal recipe repository for gluten-free and celiac-conscious cooking, with low-carb notes where useful.
+This repository stores gluten-free recipes only.
 
-## Structure
+The goal is to keep the collection simple, status-driven, and easy to evolve one recipe at a time. Recipes are organized into broad categories, while each recipe's maturity is tracked inside the recipe file using YAML front matter.
 
-```text
-recipes/
-  breakfast/
-  dinner/
-  snacks/
-  desserts/
-templates/
-  recipe-template.md
-```
-
-## Recipe standards
-
-Each recipe should include:
-
-- Ingredients
-- Step-by-step instructions
-- Tags
-- Celiac / gluten-free safety notes
-- Low-carb notes when relevant
-- Source notes if the recipe came from ChatGPT, family notes, a cookbook, or another source
-
-## Adding recipes with ChatGPT and Codex
-
-1. Create or refine the recipe in ChatGPT.
-2. Ask ChatGPT to output it as Markdown using the template in `templates/recipe-template.md`.
-3. Paste the Markdown into Codex and ask it to create the file in the correct folder.
-4. Review the diff before committing or pushing.
-
-Recommended Codex prompt:
+## Folder structure
 
 ```text
-Add the recipe below to this repository.
+GF/
+  README.md
 
-Rules:
-- Use one Markdown file per recipe.
-- Put it in the correct folder under recipes/.
-- Use a kebab-case filename.
-- Follow templates/recipe-template.md.
-- Do not invent missing ingredients, measurements, or steps.
-- Preserve uncertainty with notes where needed.
-- Include celiac-safety and low-carb notes.
+  recipes/
+    desserts/
+    savory/
+    breakfast/
 
-Recipe:
-[paste recipe here]
+  templates/
+    recipe_template.md
+
+  docs/
+    taxonomy.md
+    workflow.md
 ```
+
+## Recipe categories
+
+Use only the initial broad folders for now:
+
+- `recipes/desserts/`
+- `recipes/savory/`
+- `recipes/breakfast/`
+
+Do not reorganize into many food categories yet.
+
+## Recipe status
+
+Every recipe must have exactly one status in YAML front matter:
+
+- `CONFIRMED` = tried, approved, repeatable
+- `TEST` = working recipe, good direction, still needs refinement
+- `EXPERIMENTAL` = early idea or failed/unfinished test
+- `REFERENCE` = traditional/background recipe, not yet converted into a working house recipe
+
+Status belongs inside the recipe file. Do not create separate locked, confirmed, test, or archive folders.
+
+## Recipe file requirements
+
+- Use lowercase kebab-case filenames.
+- Add recipes one at a time.
+- Use grams wherever possible.
+- Include oven temperature, pan size, timing, resting/cooling, and texture targets when applicable.
+- Include `What changed / feedback` when the recipe status is `TEST`.
+- Do not overwrite `CONFIRMED` recipes without incrementing the recipe `version`.
+
+## Template
+
+Use `templates/recipe_template.md` for every new recipe.
+
+## Workflow
+
+See:
+
+- `docs/taxonomy.md`
+- `docs/workflow.md`
