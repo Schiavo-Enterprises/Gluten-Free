@@ -44,6 +44,24 @@ Every recipe must have exactly one status in YAML front matter:
 
 Status belongs inside the recipe file. Do not create separate locked, confirmed, test, or archive folders.
 
+## Recipe index
+
+### Desserts
+
+- `CONFIRMED` — [Basque Cheesecake — La Viña Style (Reduced Sugar)](recipes/desserts/basque-cheesecake-la-vina-style-reduced-sugar.md)
+- `CONFIRMED` — [Gluten-Free Almond Cookies (杏仁饼)](recipes/desserts/gluten-free-almond-cookies-xing-ren-bing.md)
+- `TEST` — [Gluten-Free Easter Koulourakia](recipes/desserts/gluten-free-easter-koulourakia.md)
+
+### Breakfast
+
+- `CONFIRMED` — [Gluten-Free German Pancake / Dutch Baby](recipes/breakfast/gluten-free-german-pancake-dutch-baby.md)
+
+### Savory
+
+- `TEST` — [Hummus](recipes/savory/hummus.md)
+- `EXPERIMENTAL` — [Gluten-Free Pita with Sourdough Discard](recipes/savory/gluten-free-pita-with-sourdough-discard.md)
+- `REFERENCE` — [Greek Lentil Soup (Fakes)](recipes/savory/greek-lentil-soup-fakes.md)
+
 ## Recipe file requirements
 
 - Use lowercase kebab-case filenames.
